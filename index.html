@@ -1,0 +1,55 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>MTG Deck Builder</title>
+        <meta name="description" content="A Magic: the Gathering visual deckbuilder application.">
+        <meta name="author" content="Matthew Moran">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/uikit.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/uikit.min.js"></script>
+    </head>
+    <body onload="loader()" class="uk-light uk-background-secondary">
+        <div id="main-loader-section"></div>
+        <div style="display: none;" id="export"></div>
+        <nav class="main-background-search uk-navbar-container" uk-navbar>
+            <div class="uk-navbar-left">
+                <div class="uk-navbar-item">
+                    <form class="uk-search uk-search-navbar">
+                        <span uk-search-icon></span>
+                        <input class="uk-search-input" id="searchInput" list="cardRecData" placeholder="Search...">
+                        <datalist id="cardRecData"></datalist>
+                    </form>
+                </div>
+            </div>
+            <a class="uk-form-icon uk-form-icon-flip main-plus-search" href="#" onclick="addCardSearch()" uk-icon="icon: plus; ratio: 2"></a>
+        </nav>
+
+        <div class="main-control-panel uk-container">
+            <select class="uk-select main-select-filter" name="searchFormat" id="searchFormat">
+                <option value="">None</option>
+                <option value="vintage">Vintage</option>
+                <option value="legacy">Legacy</option>
+                <option value="modern">Modern</option>
+                <option value="standard">Standard</option>
+            </select>
+            <button class="uk-button uk-button-default uk-button-small" onclick="exportDeck()">Export</button>
+            <button class="uk-button uk-button-default uk-button-small" onclick="printDeck()">Print</button>
+            <div uk-form-custom>
+                <input type="file" id="selectFiles">
+                <button class="uk-button uk-button-default uk-button-small" type="button" tabindex="-1" onclick="importDeck()">Upload</button>
+            </div>
+            <output id="list"></output>
+            <button class="uk-button uk-button-default uk-button-small" onclick="importDeck()">Import</button>
+        </div>
+
+        <div class="main-deck uk-container" id="deck">
+            <h3>Mainboard</h3><hr>
+            <h3>Sideboard</h3><hr>
+        </div>
+        <script type="text/javascript" src="js/client.js"></script>
+    </body>
+</html>
