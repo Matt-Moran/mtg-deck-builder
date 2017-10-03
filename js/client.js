@@ -10,10 +10,6 @@ var searchFormat = document.getElementById('searchFormat');
 //END OF GLOBAL VARIABLES
 /*START OF CARD SEARCH
 ----------------------------------------*/
-function loader(){
-    document.getElementById('main-loader-section').setAttribute("style", "opacity: 0;");
-}
-
 searchInput.oninput = function(){
     var cardArray = Array();
     var cardRec = document.getElementById("cardRecData");
