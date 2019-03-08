@@ -4,6 +4,10 @@ body{
     overflow-x: hidden;
 }
 
+.main-background-search{
+    background-color: #1b1b1b !important;
+}
+
 .main-plus-search{
     margin-right: 40px;
 }
@@ -46,4 +50,23 @@ body{
 
 .main-card p{
     margin: 2px;
+}
+
+#main-loader-section{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: #222222;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -webkit-transition: opacity 1s ease-in-out;
+    pointer-events: none;
+    background-image: url(../images/logo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 200px;
 }

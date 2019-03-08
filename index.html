@@ -12,14 +12,15 @@
         <script type="text/javascript" src="js/jquery.min.js"></script>
         <script type="text/javascript" src="js/uikit.min.js"></script>
     </head>
-    <body>
+    <body onload="loader()" class="uk-light uk-background-secondary ">
+        <div id="main-loader-section"></div>
         <div style="display: none;" id="export"></div>
         <nav class="main-background-search uk-navbar-container" uk-navbar>
             <div class="uk-navbar-left">
                 <div class="uk-navbar-item">
                     <form class="uk-search uk-search-navbar">
                         <span uk-search-icon></span>
-                        <input class="uk-search-input" id="searchInput" list="cardRecData" placeholder="Search...">
+                        <input class="uk-search-input" id="searchInput" name="searchInput" list="cardRecData" type="search" placeholder="Search...">
                         <datalist id="cardRecData"></datalist>
                     </form>
                 </div>
